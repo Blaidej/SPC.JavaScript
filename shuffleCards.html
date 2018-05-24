@@ -1,0 +1,68 @@
+<html >
+<head>
+    <title>Shuffle Example 2</title>
+	<style type="text/css">
+		body {				background-color: 	lightblue; }
+		table, th, td {		border: 			1px solid black;}
+		table {				margin-left:		25px; }
+	</style>
+	<script type="text/javascript">
+		function showDeck(arrayName) {
+			// DISPLAY THE DECK USING A TABLE WITH 13 ROWS AND 4 COLUMNS
+			var i = 0;
+			document.write("<table>");
+			for (i = 0; i < 52; i = i+4) {
+			document.write("<tr>");
+			document.write("<td>" + arrayName[i] + "</td>");
+			document.write("<td>" + arrayName[i + 1] + "</td>");
+			document.write("<td>" + arrayName[i + 2] + "</td>");
+			document.write("<td>" + arrayName[i + 3] + "</td>");
+			document.write("<tr>");			
+			}
+			document.write("</table>");
+		}	
+		
+	</script>
+</head>
+<body>
+<h1>Shuffle Example 2</h1>
+<script type="text/javascript">
+	var i = 0;
+	var temp = 0;
+	var orderedDeck = new Array(
+		"2 Hearts", "3 Hearts", "4 Hearts", "5 Hearts", "6 Hearts", "7 Hearts", "8 Hearts",
+		"9 Hearts", "10 Hearts", "Jack Hearts", "Queen Hearts", "King Hearts", "Ace Hearts",
+		"2 Diamonds", "3 Diamonds", "4 Diamonds", "5 Diamonds", "6 Diamonds", "7 Diamonds", "8 Diamonds",
+		"9 Diamonds", "10 Diamonds", "Jack Diamonds", "Queen Diamonds", "King Diamonds", "Ace Diamonds",
+		"2 Spades", "3 Spades", "4 Spades", "5 Spades", "6 Spades", "7 Spades", "8 Spades",
+		"9 Spades", "10 Spades", "Jack Spades", "Queen Spades", "King Spades", "Ace Spades",
+		"2 Clubs", "3 Clubs", "4 Clubs", "5 Clubs", "6 Clubs", "7 Clubs", "8 Clubs",
+		"9 Clubs", "10 Clubs", "Jack Clubs", "Queen Clubs", "King Clubs", "Ace Clubs");
+	
+	document.write("<h2>The ordered deck</h2>");
+	showDeck(orderedDeck);
+	
+	var shuffledDeck = new Array();
+	for (i=0; i < 52; i++)
+	{
+		var temp = Math.floor(Math.random() *(orderedDeck.length));
+		shuffledDeck[i] = orderedDeck [temp];
+		orderedDeck[temp] = orderedDeck[0];
+		orderedDeck.shift();
+		
+		document.write("<p>The shuffled deck after " + i + " pass is now <br />" + shuffledDeck + "</p>");
+		document.write("<p>The temp deck after " + i + " pass is now <br />" + orderedDeck + "</p>");
+	}
+		
+	document.write("<hr />");
+	document.write("<h2>The shuffled deck</h2>");
+	showDeck(shuffledDeck);
+	document.write("hr />");
+	
+	document.write("<h2>The ordered deck</h2>");
+	showDeck(orderedDeck);
+	document.write("hr />");
+	
+</script>
+<body>
+</html>

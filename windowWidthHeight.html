@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Window Examples</title>
+<style type="text/css">
+	h1 {		color: 				red; }
+	p {			color: 				blue; }
+	body {		background-color: 	lightgreen; }
+	#button1 {	position:			absolute; 
+				top: 				200px;
+				left: 				20px; }
+	#button2 {	position:			absolute; 
+				top: 				225px;
+				left: 				20px; }	
+#button3 {	position:			absolute; 
+				top: 				250px;
+				left: 				20px; }	
+#button4 {	position:			absolute; 
+				top: 				275px;
+				left: 				20px; }					
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+function getDimensions(){
+	var w1 = $(window).width();
+	document.getElementById("p1").innerHTML = "The width is now "  + w1;
+	var h1 = $(window).height();
+	document.getElementById("p2").innerHTML = "The height is now "  + h1;
+}
+
+
+	
+</script>
+</head>
+
+<body>
+<body onload = "getDimensions()" onresize="getDimensions()">
+<h1>Window Examples</h1>
+<p id="p1"></p>
+<p id="p2"></p>
+
+</body>
+</html>

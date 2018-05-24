@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Cookie Example 2A</title>
+<style type="text/css">
+	body {			background-color:	lightgreen; }
+</style>
+<script type="text/javascript">
+	function createCookie() {
+	
+		firstName = document.getElementById("firstname").value;
+		lastName = document.getElementById("lastname").value;
+		// alert("First name is "+firstName+" while last name is "+lastName);
+		string1 = "firstname = "+firstName+";";
+		string2 = "lastname = "+lastName+";";
+		alert("string1 is "+string1);
+		alert("string2 is "+string2);
+
+		document.cookie = string1;
+		document.cookie = string2;
+		window.open("cookie2b.htm", "page2", "toolbar=yes");
+	}
+</script>
+</head>
+<body>
+<h1>Cookie Example 2A</h1>
+
+<p>Please enter your first and last name</p>
+<p>First Name<input type="text" id="firstname" /></p>
+<p>Last Name<input type="text" id="lastname" /></p>
+<p><input type="submit" value="Submit" onclick="createCookie()" /></p>
+
+</body>
+</html>

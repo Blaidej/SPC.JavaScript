@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Throw Example 2A</title>
+	<style type="text/css">
+		body {			background-color: 	lightblue; }
+		#textbox1, 
+		#textbox2, 
+		#textbox3, 
+		#textbox4, 
+		#button1 {		position:			absolute;
+						left:				250px; }
+		#paragraph1 {	position: 			absolute;
+						left: 				50px;
+						top: 				250px; }
+		#paragraph2 {	position: 			absolute;
+						left: 				50px;
+						top: 				270px;
+						color:				red;
+						text-decoration:	underline; }
+	</style>
+	<script type="text/javascript">
+		function displayName() {
+		try{
+		
+			var firstName = document.getElementById("textbox1").value;
+			var lastName = document.getElementById("textbox2").value;
+			var city = document.getElementById("textbox3").value;
+			var zip = document.getElementById("textbox4").value;
+			var message1 = "Hello " + firstName + " " + lastName + " from " + city;
+			
+			if(firstName == "") throw "Please Enter a Value for First Name";
+			if(lastName == "") throw "Please Enter a Value for Last Name";
+			if(city == "") throw "Please Enter a Value for City";
+			if(zip == "") throw "Please Enter a Value for City";
+			if(isNaN(zip)) throw "Please Enter a 5 digit number for Zip Code";
+			if((zip < 0) || (zip > 99999)) throw "Please Enter a Value between 00000 and 99999";
+			
+			var message1 = message1 + ". I see your zip code is " + zip + ".";
+			document.getElementById("paragraph1").innerHTML = message1;
+			
+			//The next line clears any previous error messages to paragraph 2
+			document.getElementById("paragraph2").innerHTML = "";
+			
+		} catch(err) {
+			document.getElementById("paragraph2").innerHTML = err;
+		}
+	}
+	</script>
+</head>
+<body>
+<h1>Throw Example 2A</h1>
+
+<p>First Name: <input type="text" id="textbox1"></p>
+<p>Last Name:<input type="text" id="textbox2"></p>
+<p>City: <input type="text" id="textbox3"></p>
+<p>Zip: <input type="text" id="textbox4"></p>
+<input type="button" value="Send It!" id="button1" onclick="displayName()" />
+
+<p id="paragraph1"></p>
+<p id="paragraph2"></p>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+	<link rel="universalheader" href="universalh">
+    <meta charset="UTF-8">
+    <!--helps search engines find identify your website -->
+    <META name="keywords" content="Double dating, marriage, married couples, 
+	dating, married and dating, fun, friendship, social outing, meet other, 
+	married, table 4 4, table for for, table 4 4, married couple dining, 
+	table for four, table for 4, strengthen marriage, matching married couples,
+	similiar interests, build great friendships">
+    <!--Sets the title for the website.-->
+    <title>Table4Four</title>
+    <!--Website favicon-->
+    <link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
+    <!--This is the website description. It may be displayed in a browser search-->
+    <meta name="Table4Four" content="Married Life isn't the end of dating, Double Dating starts here.">
+    <!-- Custom styles for this template. This is last of the CSS stylesheets, so it can override the Bootsrap CSS. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="FinalProject2.css">
+<script type="text/javascript">
+	
+	var cycle = 0;
+	var timer1;
+	//This moves the man from the left side
+	function moveManL(a, b) {
+		x = a + document.getElementById("manLeft1").offsetLeft;
+		document.getElementById("manLeft1").style.left = x + "px";
+		y = b + document.getElementById("manLeft1").offsetTop;
+		document.getElementById("manLeft1").style.top = y + "px";
+	}
+	//This moves the man from the right side
+	function moveManR(c, d) {
+		x1 = c + document.getElementById("manRight1").offsetLeft;
+		document.getElementById("manRight1").style.left = x1 + "px";
+		y1 = d + document.getElementById("manRight1").offsetTop;
+		document.getElementById("manRight1").style.top = y1 + "px";
+	}
+	//This moves the man from the left side
+	function moveWomanL(a2, b2) {
+		x2 = a2 + document.getElementById("womanLeft1").offsetLeft;
+		document.getElementById("womanLeft1").style.left = x2 + "px";
+		y2 = b2 + document.getElementById("womanLeft1").offsetTop;
+		document.getElementById("womanLeft1").style.top = y2 + "px";
+	}
+	//This moves the man from the right side
+	function moveWomanR(c2, d2) {
+		x3 = c2 + document.getElementById("womanRight1").offsetLeft;
+		document.getElementById("womanRight1").style.left = x3 + "px";
+		y3 = d2 + document.getElementById("womanRight1").offsetTop;
+		document.getElementById("womanRight1").style.top = y3 + "px";
+	}
+	
+	
+	
+	function moveManL1(){
+		//Makes the man on Left visible
+		if (cycle < 10){
+			document.getElementById("manLeft1").style.visibility = "hidden";
+			document.getElementById("manLeft1").style.visibility = "visible";
+			cycle++;
+		}
+		else if(cycle < 320){
+			moveManL(3, 0);
+			cycle++;
+		}else if(cycle < 350){
+			moveManL(1.5, 0);
+			cycle++;
+		}else if(cycle < 355){
+			moveManL(0, -.8);
+			cycle++;
+		}else {
+			
+		}
+	}
+	
+	function moveManR1(){
+		if (cycle < 10){
+			//Makes the man on right visible.
+			document.getElementById("manRight1").style.visibility = "hidden";
+			document.getElementById("manRight1").style.visibility = "visible";
+			cycle++;
+		}else if (cycle < 280){
+			moveManR(-3, 0);
+			cycle++;
+		}else if(cycle < 350){
+			moveManR(-2, 0);
+			cycle++;
+		}else if(cycle < 356){
+			moveManR(0, -.8);
+			cycle++;
+		}else {
+			
+		}
+	}
+	function moveWomanL1(){
+		if (cycle < 10){
+			//Makes the woman on left visible
+			document.getElementById("womanLeft1").style.visibility = "hidden";
+			document.getElementById("womanLeft1").style.visibility = "visible";
+			cycle++;
+		}else if (cycle < 280){
+			moveWomanL(3, 0);
+			cycle++;
+		}else if(cycle < 330){
+			moveWomanL(1, 0);
+			cycle++;
+		}else if(cycle < 340){
+			moveWomanL(0, -2);
+			cycle++;
+		} else {
+			
+		}
+	}
+	//Moves the woman on the right, change cycle values, 
+	function moveWomanR1(){
+		if (cycle < 10){
+			//Makes the woman on right visible
+			document.getElementById("womanRight1").style.visibility = "hidden";
+			document.getElementById("womanRight1").style.visibility = "visible";
+			cycle++;
+		}else if (cycle < 280){
+			moveWomanR(-3, 0);
+			cycle++;
+		}else if(cycle < 320){
+			moveWomanR(-1,0);
+			cycle++;
+		}else if(cycle < 340){
+			moveWomanR(0,-1);
+			cycle++;
+		} 
+		else {
+			//Makes the table visible
+			document.getElementById("table4four").style.opacity = "hidden";
+			document.getElementById("table4four").style.visibility = "visible";
+		}
+	}
+	
+	function startPeeps(){
+	//Move to the next position every # milliseconds, for each image
+		timer1 = setInterval(moveWomanR1, 10);
+		timer1 = setInterval(moveWomanL1,10);
+		timer1 = setInterval(moveManR1, 10);
+		timer1 = setInterval(moveManL1, 10);
+	}
+	
+</script>
+
+<style>
+
+
+
+</style>
+
+  </head>
+
+  <body>
+  <main>
+    <header>
+		<div id= "heroBox">
+			<img class="heroImage" src="images/emptytable4.png" alt="Empty Table for 4 with 4 place settings">
+			<img id="manLeft1"  src="images/table4fourman1.png" alt="little moving man logo piece" >
+			<img id="manRight1"  src="images/table4fourman2.png" alt="little moving man logo piece" >
+			<img id="table4four"  src="images/table4fourtable.png" alt="little table logo" >
+			<img id="womanLeft1"  src="images/table4fourwoman1.png" alt="little moving Woman logo piece" >
+			<img id="womanRight1"  src="images/table4fourwoman2.png" alt="little moving Woman logo piece" >
+		</div>
+    </header>
+		<div id = "buttonbox">
+			<!--Button to start the images moviinng to their places on the screen.-->
+			<input type="button" id="button1" value="Start Fun" onclick="startPeeps()"" />
+  
+			<p id ="hint"> Best results produced when you have your screen width at 1080px, view it easiest by opening your inspector"</p>
+		</div>			
+    </main>
+    <footer>
+		
+    </footer>
+  </body>
+
+</html>

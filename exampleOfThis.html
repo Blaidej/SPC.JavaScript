@@ -1,0 +1,83 @@
+<!DOCTYPE.html>
+<html>
+<head>
+	<title>Example of "This - 1"</title>
+<style type="text/css">
+	body { 			background-color: lightblue; }
+	#box1 {			background-color: white;
+					height:			  200px;
+					width:			  200px; }
+	#button1 {		background-color: white;
+					height:			  200px;
+					width:			  200px; }
+	#box3 {			background-color: white;
+					height:			  200px;
+					width:			  200px; }
+	#box4 {			background-color: white;
+					height:			  200px;
+					width:			  200px; }
+	#box5 {			background-color: white;
+					height:			  200px;
+					width:			  200px; }
+					
+</style>
+<script type="text/javascript">
+
+	var i = 0;
+	
+	function changeColor(x) {
+		if ( i == 0 ) {
+			x.style.backgroundColor = "DeepPink";
+			i++;
+		} else if (i == 1 ) {
+			x.style.backgroundColor = "orange";
+			i++;
+		} else if (i == 2 ) {
+			x.style.backgroundColor = "yellow";
+			i++;
+		} else if (i == 3 ) {
+			x.style.backgroundColor = "green";
+			i++;
+		} else if (i == 4 ) {
+			x.style.backgroundColor = "purple";
+			i++;
+		} else if (i == 5 ) {
+			x.style.backgroundColor = "yellow";
+			i++;
+		} else if (i == 6 ) {
+			x.style.backgroundColor = "greenyellow";
+			i++;
+		} else if (i == 7 ) {
+			x.style.backgroundColor = "lightblue";
+			i++;
+		} else {
+			x.style.backgroundColor = "blue";
+			i=0;
+		}
+	}
+		
+</script>
+</head>
+<body>
+<h1>Example using "this" </h1>
+
+<p id="paragraph1" onclick="changeColor(this)">Ask not what your coutnry can do for you,
+												ask what you can do for your country</p>
+<div id="box1" onclick="changeColor(this)">
+<div id="box2" onclick="changeColor(this)">
+<div id="box3" onclick="changeColor(this)">
+<div id="box4" onclick="changeColor(this)">
+<div id="box5" onclick="changeColor(this)">
+	<p>Hello</p>
+</div>
+<input type ="button" value="Click Me Please" id="button1" onclick="changeColor(this)" />
+<input type ="button" value="Click Me Please" id="button1" onclick="changeColor(this)" />
+<input type ="button" value="Click Me Please" id="button1" onclick="changeColor(this)" />
+<input type ="button" value="Click Me Please" id="button1" onclick="changeColor(this)" />
+<input type ="button" value="Click Me Please" id="button1" onclick="changeColor(this)" />
+<input type ="button" value="Click Me Please" id="button1" onclick="changeColor(this)" />
+
+
+
+</body>
+</html>

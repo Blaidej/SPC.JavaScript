@@ -1,0 +1,79 @@
+<html>
+<head>
+	<!-- Author: 		Blaine -->
+	<!-- Date: 			2/7/2017 -->
+	<!-- Class:			CSCI 2240 - Client Side Programming -->
+	<!-- Instructor:	Darren Pearson -->
+	
+    <title>Handout 2 - Part 1</title>
+	<style type="text/css">
+		body 		   {	background-color:   lightblue; 
+							}
+		#weightSection {	width: 				20px;
+							height: 			25px; 
+							}
+		#heightSection {	float: 				left;
+							width: 				20px;
+							height: 			25px; 
+							}
+		#resultSection {	float: 				left;
+							width: 				50px;
+							height: 			25px;
+							background-color: 	lightgray;
+							margin-left:		20px;}
+		#BmiResult {		
+							width: 				140px;
+							height: 			25px;
+							float:				right;
+							margin-right: 		50px;
+							}					
+		#buttonbmi {		margin-bottom:		10px;					
+							margin-right: 		50px;
+							float:				right;
+							border: 			#00ccff solid 3px;
+							}
+		#container1 {		border: 			black solid 5px;
+							background-color:	lightblue;
+							margin:				20px;
+							width:				320px;
+							height:				300px;
+							float:				left;
+							}
+		#container2 {		border: 			black solid 5px;
+							background-color:	lightblue;
+							margin:				20px;
+							height:				300px;
+							}
+		p {					padding:			10px;
+							
+							}
+	</style>
+	<script type="text/javascript">
+	
+	function calcBmi() {
+	
+		var weight = document.getElementById("inWeight").value;
+		var height = document.getElementById("inHeight").value;
+		var bmi = Math.round(Number(weight * 703 ) / Number(height * height));
+		document.getElementById("BmiResult").value = bmi;
+	}
+	
+	</script>
+</head>
+<body onload="calcBmi">
+
+<h1>BMI Example</h1>
+<form id="container1">
+<p> <input type="text" id="inWeight"/> Weight in pounds</p>
+<p> <input type="text" id="inHeight"/> Height in inches</p>
+	
+<input type="button" id="buttonbmi" value="Calculate BMI" onclick="calcBmi()" />
+<p style="clear:both">
+<p>BMI Result<input type="text" id="BmiResult"></p>
+
+</form>
+
+<img src="bmi.jpg" alt="bmi chart" id="container2" height="300" width="473">
+
+<body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE.html>
+<html>
+<head>
+	<title>Math Example 1</title>
+<style type="text/css">
+	body { 			background-color: lightblue; }
+</style>
+</head>
+<body>
+<h1>Math Example 2 </h1>
+<h2>Slightly More Complex Operations</h2>
+<script type="text/javascript">
+	
+	var text1 = "Hello There";
+	var text2 = "To be or not to be, that is the question";
+	var a = text1.length;
+	var b = text2.length;
+
+	document.write("<p>The string '" + text1 + "'has " + a + " characters in it</p>");
+	document.write("<p>The string '" + text2 + "'has " + b + " characters in it</p>");
+	
+	
+	var text3 = "abcdefghijklmnop";
+	var c = text3.length;
+	var firstCharacter = text3.charAt(0);
+	var lastCharacter = text3.charAt(c-1);
+	var fifthCharacter = text3.charAt(4);
+	var nPosition = text3.indexOf("n") +1;
+	var zPosition = text3.indexOf("z");
+	
+	document.write("<p>The string '" + text3 + "':</p>");
+	document.write("<ul><li>The first character is '"  + firstCharacter + "' </li>");
+	document.write("<li>The last character is '"  + lastCharacter + "' </li>");
+	document.write("<li>The last fifth Character is '"  + fifthCharacter + "' </li>");
+	document.write("<li>The character n is '"  + nPosition + "' character in the string </li>");
+	document.write("<li>The character z is '"  + zPosition + "' character in the string </li>");
+
+	var text4 = "Happy Birthday Darren!";
+	var text5 = text4.replace("Darren", "Mister Person");
+	document.write("<p>The orginal string is '" + text4 + "'</p>");
+	document.write("<p>The modified string is '" + text5 + "'</p>");
+	var text6 = "I had three egss and three pieces of bacon today";
+	var text7 = text6.replace("three", "five");
+	var text8 = text7.replace("three", "five");
+	document.write("<p>The orginal string is '" + text6 + "'</p>");
+	document.write("<p>The first modified string is '" + text7 + "'</p>");
+	document.write("<p>The second modified string is '" + text8 + "'</p>");
+	
+	var text9 = text6.search("eggs");
+	var text10 = text6.search("bacon");
+	var text11 = text6.search("pancakes");
+	document.write("<p>Search the string '" + text6 + "' for</p>");
+	document.write("<ul><li>eggs: '" + text9 + "'</li>");
+	document.write("<li>bacon: '" + text10 + "'</li>");
+	document.write("<li>pancakes: '" + text11 + "'</li></ul>");
+	
+</script>
+</body>
+</html>

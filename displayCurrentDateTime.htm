@@ -1,0 +1,76 @@
+<!DOCTYPE >
+<html >
+<head>
+<title>Function Example 3</title>
+<style type="text/css">
+		body {				background-color: 	lightblue; }
+</style>
+<script type="text/javascript">
+	function displayMonth(temp) {
+		var monthString;
+		switch(temp) {
+			case 0: monthString = "January"; break;
+			case 1: monthString = "February"; break;
+			case 2: monthString = "March"; break;
+			case 3: monthString = "April"; break;
+			case 4: monthString = "May"; break;
+			case 5: monthString = "June"; break;
+			case 6: monthString = "July"; break;
+			case 7: monthString = "August"; break;
+			case 8: monthString = "September"; break;
+			case 9: monthString = "October"; break;
+			case 10: monthString = "November"; break;
+			default: monthString = "December";
+		}
+		document.getElementById("textbox1").value = monthString;
+	}
+
+	function displayTimeOfDay(temp1, temp2, temp3) {
+		var timeOfDay = "AM";
+		if (temp1 >= 13) {
+			temp1 = temp1 - 12;
+			var timeOfDay = "PM";
+		}
+		var timeString = temp1 + " : " + temp2 + " : " + temp3 + " " + timeOfDay;
+		document.getElementById("textbox2").value = timeString;
+	}
+
+	function displayDayOfTheWeek(temp4) {
+		var dayString;
+		if (temp4 == 0) { dayString = "Sunday"; }
+		else if (temp4 == 1) { dayString = "Monday"; }
+		else if (temp4 == 2) { dayString = "Tuesday"; }
+		else if (temp4 == 3) { dayString = "Wednesday"; }
+		else if (temp4 == 4) { dayString = "Thursday"; }
+		else if (temp4 == 5) { dayString = "Friday"; }
+		else { dayString = "Saturday"; }
+		document.getElementById("textbox3").value = dayString;	
+	}
+
+</script>
+</head>
+<body>
+<h1>Function Example 3</h1>
+<p>The month is currently set to <input type="text" id="textbox1"></p>
+<p>The time is currently set to <input type="text" id="textbox2"></p>
+<p>The day of the week is currently set to <input type="text" id="textbox3"></p>
+
+<script type="text/javascript">
+	var rightNow = new Date();
+	var x1 = rightNow.getDate();
+	var x2 = rightNow.getMonth();
+	var x3 = rightNow.getHours();
+	var x4 = rightNow.getMinutes();
+	var x5 = rightNow.getSeconds();
+	var x6 = rightNow.getFullYear();
+	var x7 = rightNow.getDay();
+	var x8 = rightNow.getTime();
+	
+	displayMonth(x2);
+	displayTimeOfDay(x3, x4, x5);	
+	displayDayOfTheWeek(x7);
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE.html>
+<html>
+<head>
+	<title>Function Two</title>
+<style type="text/css">
+	body { 		background-color: 	lightblue; }
+	#inputA {	position:			absolute:
+				left:				150px;		}
+	#inputB {	position:			absolute:
+				left:				150px;		}
+	#button1 {	position:			absolute:
+				left:				150px;		}
+	#button2 {	position:			absolute:
+				left:				150px;		}
+	#button3 {	position:			absolute:
+				left:				150px;		}
+	#button4 {	position:			absolute:
+				left:				150px;		}
+	#result {	position:			absolute:
+				left:				150px;		}
+				
+</style>
+	<script type="text/javascript">
+
+	function doSomeMath(input1) {
+		alert("The value passed to the function was " + input1);
+		var temp1 = document.getElementById("inputA").value;
+		var temp2 = document.getElementById("inputB").value;
+		if (input1 == "addition") {
+			var temp3 = Number(temp1) + Number(temp2);
+		}else if (input1 == "subtraction"){
+			var temp3 = Number(temp1) - Number(temp2);
+		}else if (input1 == "multiplication"){
+			var temp3 = Number(temp1) * Number(temp2);
+		}
+		else{
+			var temp3 = Number(temp1) / Number(temp2);
+		}
+		document.getElementById("result").value = temp3;
+	}
+	
+
+</script>
+</head>
+<body>
+<h1>Function 1 </h1>
+
+<p>First Number <input type="text" id="inputA" /></p>
+<p>Second Number <input type="text" id="inputB" /></p>
+<p>
+Operation
+	<input type="button" id="button1" value="Add" onclick="doSomeMath('addition')" />
+	<input type="button" id="button2" value="Sub" onclick="doSomeMath('subtraction')" />
+	<input type="button" id="button3" value="Mult" onclick="doSomeMath('multiplication')" />
+	<input type="button" id="button4" value="Div" onclick="doSomeMath('division')" />
+</p>
+<p>Result<input type="text" id="result"></p>
+
+
+<h2></h2>
+
+	
+	
+
+</body>
+</html>

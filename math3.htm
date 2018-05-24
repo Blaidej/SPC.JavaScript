@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Math Example 3</title>
+<style type="text/css">
+	body {		background-color:	lightblue; }
+	h1, h2 { 	color: 				white; }
+	#button1 {	position:			absolute;
+				top:				120px;
+				left:				20px; }
+	#die1 {		position:			absolute;
+				top:				180px;
+				left:				50px; }
+	#die2 {		position:			absolute;
+				top:				180px;
+				left:				400px; }
+	#results {	position:			absolute;
+				top:				500px;
+				left:				20px; }
+</style>
+<script type="text/javascript">
+	function rollDice() {
+	
+		var c1= Math.ceil(6*(Math.random()));
+		
+		var a2 = Math.random();
+		var b2 = 6*a2;
+		var c2 = Math.ceil(b2);
+		
+		alert("The first die is " + c1);
+		alert("The first die is " + c2);
+		
+		var sum = c1 + c2;
+		document.getElementById("text1").value = sum;
+		
+		if (c1 == 1) {
+			document.getElementById("die1").src = "one.jpg";
+		} else if(c1 == 2) {
+			document.getElementById("die1").src = "two.jpg";
+		} else if(c1 == 3) {
+			document.getElementById("die1").src = "three.jpg";
+		} else if(c1 == 4) {
+			document.getElementById("die1").src = "four.jpg";
+		} else if(c1 == 5) {
+			document.getElementById("die1").src = "five.jpg";
+		} else{
+			document.getElementById("die1").src = "six.jpg";
+		}
+
+		if (c2 == 1) {
+			document.getElementById("die2").src = "one.jpg";
+		} else if(c2 == 2) {
+			document.getElementById("die2").src = "two.jpg";
+		} else if(c2 == 3) {
+			document.getElementById("die2").src = "three.jpg";
+		} else if(c2 == 4) {
+			document.getElementById("die2").src = "four.jpg";
+		} else if(c2 == 5) {
+			document.getElementById("die2").src = "five.jpg";
+		} else{
+			document.getElementById("die2").src = "six.jpg";
+		}
+	}
+	document.write(c2)
+	document.write(c1)
+	
+</script>
+</head>
+<body>
+<h1>Math Example 3</h1>
+
+<h2>Random Number Generation</h2>
+<input type="button" id="button1" value="Roll The Dice" onclick="rollDice()" />
+<img src="blank.jpg" alt="First Die" id="die1" />
+<img src="blank.jpg" alt="Second Die" id="die2" />
+
+
+<div id="results">
+	<p>The result is <input type="text" id="text1" /></p>
+</div>
+
+</body>
+</html>
+

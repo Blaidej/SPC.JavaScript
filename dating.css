@@ -1,0 +1,247 @@
+
+body {
+	
+	padding-top: 50px;/*If I put a static menubar up top, they recommend having 70px of padding*/
+	color: #000000;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align:left;
+	
+}
+header {
+	background-color: #3399ff;
+	color: #ffffff;
+	text-align: left;
+	text-decoration:none;
+	
+	
+}
+main {font-size: 1.2em;
+		color: black;
+		background: rgba(255,255,255,0);
+		width: 100%;
+		padding:1px;
+		
+}
+h1 	{
+	line-height: 1.2em;
+	
+}
+nav a { text-decoration: none;
+		padding-right: 30px;
+		color: #3399ff;
+		
+		
+}
+nav ul {
+	list-style-type: none;
+	text-align: center;
+
+	
+}
+nav li {
+	display: inline;
+}
+nav	{
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.7em;
+	line-height:2em;
+	font-family: 'Merriweather', serif;
+	
+	
+	
+}
+
+
+h2	{
+	color: #000000;
+	font-weight: bold;
+}
+dt	{
+	color: #000033;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+footer {
+	font-size: .70em;
+	font-style: italic;
+	text-align: center;	
+}
+label{
+	display:block;
+}
+input,textarea{
+	width:100%;
+}
+
+
+/*Class & ID designators */
+#createUser{
+	width:300px;
+	margin: 0 auto;
+	color: #0073e6;
+}
+
+
+.navbar {
+	background-color: #3399ff;
+	border: #3399ff;
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #ffffff;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color: #a6a6a6;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus{
+	color:#999999;
+	background-color: transparent;
+}
+.central{
+	max-width:1000px;
+	margin:0 auto;
+	display:block;
+}
+.currentpage{
+	background-color: #0073e6;
+}
+.fullgMap{
+	visibility: hidden;
+	position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.fullgMap iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    }
+.happyHourgMap {
+	width: 600;
+	height:450;
+	border:"0";
+	
+}
+/*#buttonfun {
+	
+	
+}*/
+/*background image for my profile page*/
+#profile {
+    background: url('images/restpatio.jpg') no-repeat center center;
+    width: 100%;
+    height: auto;
+}
+#profile2 {
+    background: url('images/glasses-set-up-on-resaurant-table.jpg') no-repeat center center;
+    width: 100%;
+    height: auto;
+
+}
+#profile3 {
+    background: url('images/opensign.jpg') no-repeat center center;
+    width: 100%;
+    height: auto;
+
+}
+
+
+.favtitle{
+	font-family: 'Merriweather', serif;
+	text-align: center;
+}
+.sitename{
+	color: #ffffff;
+	font-family: "Georgia";
+	font-weight: bold;
+	font-size: 3em;
+	/*padding-top: 0px;*/
+	border: 3
+		
+}
+.center{
+	margin-left:auto;
+	margin-right:auto;
+}
+.name2{
+	color: #000033;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 1.24em;
+}
+.imgborder {
+	border-bottom: 3px solid #ffffff;
+	height:auto;
+	width:100%;
+}
+
+#herobox {
+	
+	
+	
+}
+
+#man1{
+	position: 50px,50px;
+	
+}
+.logo{
+	float: left;
+	padding-top: 4px;
+	border: none;
+}
+.titlepic{
+	padding: 15px;
+}
+.floatr{
+	float: right;
+}
+.floatl{
+	float: left;
+	
+}
+.projectNotes{
+	float: right;
+	font-family: 'Merriweather', serif;
+	text-align: center;
+	font-size: .7em;
+	color: black;
+}
+@media only screen and (max-width: 1250px){
+.tomuchmedia1 {
+	display:none;
+}
+}
+@media only screen and (max-width: 1000px){
+.tomuchmedia2 {
+	display:none;
+}
+}
+@media only screen and (max-width: 767px){
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	color: #ffffff;
+	background-color:transparent;
+}
+}
+@media only screen and (max-width: 700px){
+.tomuchmedia3 {
+	display:none;
+}
+.float {
+	display: none;
+}
+.titlepic {
+	display: none;
+}
+
+}
+
